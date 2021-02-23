@@ -1,0 +1,14 @@
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background: #000;
+}
+

@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Test from './componet/Test/Test'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import { Button } from 'semantic-ui-react'
+
+class App extends Component {
+
+  state = {
+    title: "Счётчик",
+    countDown: 0
+  }
+
+  changeNextHenlder = () => {
+    let number = this.state.countDown
+    this.setState({
+      countDown: ++number
+    })
+  }
+
+  changeBackHenlder = () => {
+    let number = this.state.countDown
+    this.setState({
+      countDown: --number
+    })
+  }
+
+  render() {
+    const data = this.state
+    return (
+      <div className="items">
+        <Test data={data} />
+        <div>
+          <Button negative onClick={this.changeBackHenlder}>back</Button>
+          <Button positive onClick={this.changeNextHenlder}>next</Button>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;

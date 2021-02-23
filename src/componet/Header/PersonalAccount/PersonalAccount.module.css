@@ -1,0 +1,10 @@
+.button__PersonalAccount {
+    border-radius: 5px;
+    background: tomato;
+    padding: 1px 12px;
+    cursor: pointer;
+}
+
+.button__PersonalAccount:hover {
+    background: red;
+}

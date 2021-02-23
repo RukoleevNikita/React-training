@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.titleTest {
+  font-size: 50px;
+}
+.countNumber {
+  font-size: 80px;
+  text-align: center;
+  padding: 10px;
+  color: coral;
+  font-weight: bold;
 }
